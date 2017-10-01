@@ -1,0 +1,22 @@
+{
+  "intents": [
+    {
+      "intent": "ListRoutes"
+    },
+    {
+      "intent": "ListStops"
+    },
+    {
+      "slots": [
+        {
+          "name": "route",
+          "type": "ROUTE"
+        },
+        {
+          "name": "stop",
+          "type": "STOP"
+        }
+      ],
+      "intent": "GetArrivalTimes"
+    }
+  ]

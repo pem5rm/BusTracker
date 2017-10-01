@@ -1,0 +1,13 @@
+ListRoutes what routes are near me
+ListRoutes what routes
+ListRoutes routes
+ListRoutes list routes
+ListStops what stops are near me
+ListStops what stops
+ListStops stops
+ListStops list stops
+GetArrivalTimes when will the {route} be at {stop}
+GetArrivalTimes when will the next {route} be at {stop}
+GetArrivalTimes when will the {route} arrive at {stop}
+GetArrivalTimes when will the next {route} be at {stop}
+GetArrivalTimes {route} at {stop}
