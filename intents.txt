@@ -1,12 +1,6 @@
 {
   "intents": [
     {
-      "intent": "ListRoutes"
-    },
-    {
-      "intent": "ListStops"
-    },
-    {
       "slots": [
         {
           "name": "route",
@@ -18,5 +12,9 @@
         }
       ],
       "intent": "GetArrivalTimes"
+    },
+    {
+      "intent": "Help"
     }
   ]
+}
