@@ -39,7 +39,7 @@ def get_arrival_times(route, stop):
 @ask.intent("Help")
 
 def get_help():
-    return statement("This skill uses TransLoc's Open API  to provide arrival estimates for any bus route and any stop at UVA. The names of bus routes and stops are the same as they are on the 'Rider' app. For example you could ask: 'When will the next Northline be at McCormick Rd @ Alderman Library'.")
+    return statement("This skill uses TransLoc's Open API to provide arrival estimates for any bus route and any stop at UVA. The names of bus routes and stops are the same as they are on the 'Rider' app. For example you could ask: 'When will the next Northline be at McCormick Rd @ Alderman Library'.")
 
 
 if __name__ == '__main__':
