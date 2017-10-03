@@ -1,0 +1,97 @@
+john street
+virginia ave
+wertland street (northbound)
+wertland street (southbound)
+facilities mgmt
+gooch/dillard
+alderman road @ o-hill dining hall
+stadium road
+afc
+arlington blvd @ massie road
+barracks road shopping ctr
+arlington ct
+copeley road @ massie road (inbound)
+copeley road @ massie road (outbound)
+copeley road @ seymour ct (inbound)
+copeley road @ seymour ct (outbound)
+darden
+north grounds rec
+alumni hall
+central grounds garage
+goodwin bridge
+ruffner hall
+emmet street @ snyder tennis courts
+emmet ivy garage (eig)
+bryant hall (outbound)
+sab
+scott stadium
+stadium west shelf
+16th street
+preston pl
+10 ½ street nw (westbound)
+14th street
+johnson house
+kellogg dorm
+hereford drive @ runk dining hall
+emmet ivy garage
+brandon ave
+cabell hall
+pinn hall
+kent terrace
+maury ave
+montebello circle
+observatory ave
+shamrock road (northbound)
+shamrock road (southbound)
+jefferson park ave @ uva hospital
+valley road
+woodrow street
+mr-5
+preston ave
+copeley student housing
+faulkner housing (inbound)
+faulkner housing (outbound)
+law school
+u-hall east lot
+mccormick residence hall
+mccormick road @ o-hill dining hall
+physics building
+mimosa drive (inbound)
+washington park
+203 rugby road
+beta bridge (outbound)
+seymour ct (inbound)
+seymour ct (outbound)
+copeley hill housing
+appletree road
+stadium road @ runk dining hall
+cage lot
+copeley road
+u-hall @ massie road
+west entrance
+jefferson park ave
+engineering school (inbound)
+engineering school (outbound)
+grady ave
+john paul jones arena
+lambeth housing
+bryant hall (inbound)
+gilmer hall
+thornton hall
+mimosa drive (outbound)
+stadium garage
+ivy road
+university heights
+foods of all nations
+brown college (night stop)
+clark hall (night stop)
+garrett hall
+monroe hall
+uva chapel
+university ave @ snyder tennis courts
+carr's hill field
+alderman library
+north grounds rec (inbound)
+north grounds rec (outbound)
+john paul jones arena (night stop)
+lee street @ uva hospital
