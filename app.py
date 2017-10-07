@@ -17,7 +17,7 @@ from api import *
 
 def launch():
 
-    return question("Welcome to UVA Bus Tracker! What would you like to know?").reprompt("Which bus route and stop do you want arrival estimates for? Or, just say 'help' to get more information about this skill.")
+    return question("Welcome to UVA Bus Tracker!").reprompt("Which bus route and stop do you want arrival estimates for? Or, just say 'help' to get more information about this skill.")
 
 # Allows the user to ask get estimated arrival times for a particular bus route and stop
 @ask.intent("GetArrivalTimes", mapping={"route" : "route", "stop" : "stop"})
@@ -25,8 +25,10 @@ def launch():
 def get_arrival_times(route, stop):
 
     data = get_estimate(route, stop)
+    if data["train"] != None:
+        return question(data["train"])
     if data["error"] != None:
-        return question(data["error"] + " Could you please repeat the question?")
+        return question("Error" + data["error"] + " Could you please repeat the question?")
     elif len(data["arrivalEstimates"]) == 0:
         return question("Sorry, it doesn't look like " + data["route"] + " will be stopping at " + data["stop"] + " anytime soon.")
 
@@ -57,3 +59,7 @@ def get_help():
 if __name__ == '__main__':
 
     app.run(debug=True)
+
+
+
+
