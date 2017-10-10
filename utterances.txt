@@ -1,4 +1,16 @@
 GetArrivalTimes how long until the {route} arrives at {stop}
 GetArrivalTimes when will the {route} arrive at {stop}
 GetArrivalTimes when is the {route} going to arrive at {stop}
-Help help
+GetArrivalTimes when is the {route} gonna arrive at {stop}
+GetArrivalTimes when is the {route} going to be at {stop}
+GetArrivalTimes when is the {route} gonna be at {stop}
+GetArrivalTimes when will the {route} be at {stop}
+GetArrivalTimes {route} at {stop}
+GetArrivalTimes when's the {route} going to arrive at {stop}
+GetArrivalTimes when's the {route} gonna arrive at {stop}
+GetArrivalTimes when's the {route} going to be at {stop}
+GetArrivalTimes when's the {route} gonna be at {stop}
+AMAZON.HelpIntent help
+AMAZON.StopIntent stop
+AMAZON.StopIntent never mind
+AMAZON.StopIntent cancel

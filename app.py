@@ -17,9 +17,18 @@ from api import *
 
 def launch():
 
-    return question("Welcome to UVA Bus Tracker!").reprompt("Which bus route and stop do you want arrival estimates for? Or, just say 'help' to get more information about this skill.")
+    return question("Welcome to UVA Bus Tracker! Which bus route and stop do you want arrival estimates for?").reprompt("For example you could ask: 'When will the Northline arrive at University Avenue at Snyder Tennis Courts'. Which bus route and stop would you like arrival estimates for?")
 
 # Allows the user to ask get estimated arrival times for a particular bus route and stop
+
+
+@ask.intent("AMAZON.StopIntent")
+def exit():
+    return statement("")
+
+
+
+
 @ask.intent("GetArrivalTimes", mapping={"route" : "route", "stop" : "stop"})
 
 def get_arrival_times(route, stop):
@@ -28,9 +37,9 @@ def get_arrival_times(route, stop):
     if data["train"] != None:
         return question(data["train"])
     if data["error"] != None:
-        return question("Error" + data["error"] + " Could you please repeat the question?")
+        return question(data["error"] + " Please make sure to use the full name of the bus route and stop. Could you please repeat the question?")
     elif len(data["arrivalEstimates"]) == 0:
-        return question("Sorry, it doesn't look like " + data["route"] + " will be stopping at " + data["stop"] + " anytime soon.")
+        return statement("Sorry, it doesn't look like " + data["route"] + " will be stopping at " + data["stop"] + " anytime soon.")
 
     else:
 
@@ -41,19 +50,19 @@ def get_arrival_times(route, stop):
             current = "There's a " + data["route"] + " boading at " +  data["stop"] + " now."
 
         if len(data["arrivalEstimates"]) > 2:
-            return question(current + " There are also busses arriving in " + " minutes, ".join(data["arrivalEstimates"][1:-1]) + " minutes, and " + (data["arrivalEstimates"][-1] + " minutes."))
+            return statement(current + " There are also " + data["route"] + " busses arriving in " + " minutes, ".join(data["arrivalEstimates"][1:-1]) + " minutes, and " + (data["arrivalEstimates"][-1] + " minutes."))
 
         elif len(data["arrivalEstimates"]) == 2:
-            return question(current + " There's also a bus arriving in " + data["arrivalEstimates"][1] + " minutes.")
+            return statement(current + " There's also a " + data["route"] + " bus arriving in " + data["arrivalEstimates"][1] + " minutes.")
         elif len(data["arrivalEstimates"]) == 1:
-            return question(current)
+            return statement(current)
 
 
 # Provides info about the skill
-@ask.intent("Help")
+@ask.intent("AMAZON.HelpIntent")
 
 def get_help():
-    return question("This skill uses TransLoc's Open API to provide arrival estimates for any bus route and any stop at UVA. The names of bus routes and stops are the same as they are on the 'Rider' app. For example you could ask: 'When will the next Northline be at McCormick Rd @ Alderman Library'.")
+    return question("You can ask UVA Bus Tracker to get arrival estimates for buses at the University of Virginia. Please make sure to use the full name of the bus route and stop. For example you could ask: 'When will the Northline arrive at University Avenue at Snyder Tennis Courts'. Which bus route and stop do you want arrival estimates for?")
 
 
 if __name__ == '__main__':

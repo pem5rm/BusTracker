@@ -14,7 +14,10 @@
       "intent": "GetArrivalTimes"
     },
     {
-      "intent": "Help"
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
     }
   ]
 }

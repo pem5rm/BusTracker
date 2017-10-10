@@ -26,7 +26,6 @@ stop_alias = {'14th Street NW @ John St' : '14th Street NW @ John St',
 'Alderman Rd @ Gooch/Dillard' : 'Alderman Rd @ Gooch/Dillard',
 'Alderman Rd @ O-Hill Dining Hall' : 'Alderman Rd @ O-Hill Dining Hall',
 'Alderman Rd @ Stadium Rd' : 'Alderman Rd @ Stadium Rd', 'alderman road at stadium' :  'Alderman Rd @ Stadium Rd', 'alderman rooted stadium' : 'Alderman Rd @ Stadium Rd', 'alderman rodents tdm' : 'Alderman Rd @ Stadium Rd', 'minute at stadium' : 'Alderman Rd @ Stadium Rd',
-'AFC' : 'Alderman Road @ AFC',
 'Arlington Blvd @ Massie Rd' : 'Arlington Blvd @ Massie Rd',
 'Arlington Blvd @ Barracks Rd Shopping Ctr' : 'Arlington Blvd @ Barracks Rd Shopping Ctr',
 'Arlington Blvd @ Arlington Ct' : 'Arlington Blvd @ Arlington Ct', 'Arlington boulevard in Arlington quote' : 'Arlington Blvd @ Arlington Ct',
@@ -215,7 +214,7 @@ def get_estimate(routeName, stopName, direction="forward", train=False):
             # print(routeName)
 
 
-            bestRoute = routeToId[route_alias[(difflib.get_close_matches(routeName, route_alias, cutoff=0.00))[0]]]
+            bestRoute = routeToId[route_alias[(difflib.get_close_matches(routeName, route_alias, cutoff=0.5))[0]]]
 
             # print((difflib.get_close_matches(routeName, route_alias, cutoff=0.00))[0:3])
             # print(bestRoute)
@@ -234,7 +233,7 @@ def get_estimate(routeName, stopName, direction="forward", train=False):
             #     bestStop = stopToId[stop_alias[(difflib.get_close_matches(stopName, stop_alias, cutoff=0.00))[i]]]
             #     i += 1
 
-            bestStop = stopToId[stop_alias[(difflib.get_close_matches(stopName, stop_alias, cutoff=0.00))[0]]]
+            bestStop = stopToId[stop_alias[(difflib.get_close_matches(stopName, stop_alias, cutoff=0.5))[0]]]
 
             # print((difflib.get_close_matches(stopName, stop_alias, cutoff=0.00))[0:3])
             # print(bestStop)
@@ -259,7 +258,7 @@ def get_estimate(routeName, stopName, direction="forward", train=False):
             #     print(difflib.SequenceMatcher(None, routeName, word).ratio(), word, routeName)
 
         except:
-            data["error"] = "Sorry, I didn't quite get that. "
+            data["error"] = "Hmm, I didn't quite get that. "
             return data
 
         # This section sends a GET request to the TransLoc Open API to get the arrival estimates
@@ -281,7 +280,7 @@ def get_estimate(routeName, stopName, direction="forward", train=False):
 
     # Returns an error message if something goes wrong
     except:
-        data["error"] = "Sorry, I didn't understand that. "
+        data["error"] = "Hmm, I didn't quite get that. "
         return data
 
 
